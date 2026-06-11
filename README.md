@@ -1,4 +1,3 @@
-# advanced_programming
-this repository is created to upload the classwork of Advanced Programming work of :
-ROLL NO:CSB24066
+Write a Java program using ArrayList to store book titles.
+Add at least 5 books and search for books whose title contains a given word
 
