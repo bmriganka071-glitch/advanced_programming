@@ -1,4 +1,2 @@
-# advanced_programming
-this repository is created to upload the classwork of Advanced Programming work of :
-ROLL NO:CSB24066
 
+Write a C program to analyze time complexities in constant time, linear time and quadratic time. Increase the size of input to check the time consumed.
