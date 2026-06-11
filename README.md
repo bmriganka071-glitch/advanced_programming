@@ -1,4 +1,2 @@
-# advanced_programming
-this repository is created to upload the classwork of Advanced Programming work of :
-ROLL NO:CSB24066
-
+#Create a simple React component that maintains a list of todos using useState.
+Allow the user to add a todo and display all added todos on the screen.
