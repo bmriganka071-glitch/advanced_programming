@@ -1,4 +1,2 @@
-# advanced_programming
-this repository is created to upload the classwork of Advanced Programming work of :
-ROLL NO:CSB24066
-
+#Create a Python program using a list and dictionary to store products with name and stock quantity.
+Display all products whose stock is less than 10.
