@@ -1,34 +1,16 @@
-#Assignment 12: 
-Design a system in java/python for processing customer orders in an e-commerce platform. 
+#Assignment 17: 
+Build a user onboarding validation module for a platform. Your objective is to create a core validation class that processes incoming application data—specifically a user's email address and age—and enforces strict business constraints before allowing a registration to complete.
 
-An order system should support:
+The system must ensure that the email string is neither null nor empty, and that it conforms to a standard email format matching the regular expression patterns outlined in the slides (containing a valid identifier, an @ symbol, and a domain name). Additionally, the system must enforce a strict age restriction where applicants must be at least 18 years old to create an account.
 
-Multiple payment methods (Credit Card, UPI, Wallet, etc.)
-Multiple notification channels (Email, SMS, Push)
-Different order types (Regular Order, Discounted Order, Priority Order)
-Ability to store order data using different storage mechanisms (Database, File, etc.)
-Design Constraints (Must Apply SOLID Principles)
+Implementation Rules
+If choosing Java: You must implement a checked exception named InvalidEmailException and an unchecked (RuntimeException) exception named UnderageException. Create a RegistrationService class containing a method public boolean registerUser(String email, int age) throws InvalidEmailException. You must include an internal assert statement to guarantee that the inputs are not processed if the system context is invalid. Finally, write a JUnit 5 test suite named RegistrationServiceTest that uses a @BeforeEach setup method, validates successful registrations, and uses assertThrows to verify that both custom exceptions are thrown under incorrect conditions.
 
-Your design must satisfy the SOLID principles as follows:
+If choosing Python: You must implement a custom exception named InvalidEmailError and another named UnderageError, both inheriting from the appropriate built-in exception classes. Create a RegistrationService class containing a method def register_user(self, email: str, age: int) -> bool. Use an internal assert statement to verify basic state invariants. Finally, write a pytest suite using a shared @pytest.fixture for configuration, validating successful workflows, and utilizing pytest.raises to assert that your custom errors are raised appropriately during invalid inputs.
 
-1. Single Responsibility Principle (SRP): Each class should have a single responsibility
-(e.g., order logic, payment processing, notification, storage should be separate)
+You must have the followings:
+Custom Exception Design: Correctly establishing checked vs. unchecked hierarchies (Java) or appropriate base class inheritance (Python) with descriptive, dynamic error messages.
 
-2. Open/Closed Principle (OCP): You should be able to add:
-New payment methods
-New notification types
-Without modifying existing classes
+Core Service Validation: Implementing the regex parsing, age boundary checks, invariant assertions, and proper exception triggering.
 
-3. Liskov Substitution Principle (LSP): All subclasses (e.g., payment types, order types) should work correctly when used through their base type, No subclass should break expected behavior
-
-4. Interface Segregation Principle (ISP): Avoid large interfaces, Design small, role-specific interfaces
-(e.g., don’t force all classes to implement unused methods)
-
-5. Dependency Inversion Principle (DIP): High-level classes (e.g., OrderService) must depend on abstractions, not concrete implementations, Use dependency injection.
-
-Your system should:
-
-Create an order,
-Process payment using a selected payment method,
-Send notification after successful order,
-Save order details using a storage mechanism;
+Unit Testing Suite: Writing comprehensive test cases using the correct framework assertions, proper test lifecycle setup (fixtures/before-each), and targeted exception testing.
