@@ -1,4 +1,2 @@
-# advanced_programming
-this repository is created to upload the classwork of Advanced Programming work of :
-ROLL NO:CSB24066
 
+Write a c program for three different operations as stated in question 1 to analyze the space complexity.
