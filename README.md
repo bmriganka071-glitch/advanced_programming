@@ -1,34 +1,40 @@
-#Assignment 12: 
-Design a system in java/python for processing customer orders in an e-commerce platform. 
+#Assignment 19: Simple Digital Counter & Theme Toggle App 
 
-An order system should support:
+Build a single-screen mobile application using React Native. The app functions as a digital counter that allows users to increment, decrement, and reset a number displayed on the screen. To make the app more interactive, it must also include a "Theme Toggle" button that switches the screen's background and text colors between a Light Mode and a Dark Mode.
 
-Multiple payment methods (Credit Card, UPI, Wallet, etc.)
-Multiple notification channels (Email, SMS, Push)
-Different order types (Regular Order, Discounted Order, Priority Order)
-Ability to store order data using different storage mechanisms (Database, File, etc.)
-Design Constraints (Must Apply SOLID Principles)
+This assignment focuses on your ability to set up a basic React Native environment, layout components cleanly using Flexbox, and manage UI changes dynamically using React's state management.
 
-Your design must satisfy the SOLID principles as follows:
+Implementation Rules
 
-1. Single Responsibility Principle (SRP): Each class should have a single responsibility
-(e.g., order logic, payment processing, notification, storage should be separate)
+Core Layout: The application must use standard React Native components: View, Text, and TouchableOpacity (or Button). The counter UI should be perfectly centered on the screen.
 
-2. Open/Closed Principle (OCP): You should be able to add:
-New payment methods
-New notification types
-Without modifying existing classes
+State Management: Use the useState hook to manage two pieces of state: the current counter value (integer) and the active theme mode (boolean or string).
 
-3. Liskov Substitution Principle (LSP): All subclasses (e.g., payment types, order types) should work correctly when used through their base type, No subclass should break expected behavior
+Counter Logic: * The counter should start at 0.
 
-4. Interface Segregation Principle (ISP): Avoid large interfaces, Design small, role-specific interfaces
-(e.g., don’t force all classes to implement unused methods)
+The "Increment" button must increase the count by 1.
 
-5. Dependency Inversion Principle (DIP): High-level classes (e.g., OrderService) must depend on abstractions, not concrete implementations, Use dependency injection.
+The "Decrement" button must decrease the count by 1, but it should never let the counter go below 0 (prevent negative numbers).
 
-Your system should:
+The "Reset" button must bring the count back to 0.
 
-Create an order,
-Process payment using a selected payment method,
-Send notification after successful order,
-Save order details using a storage mechanism;
+Dynamic Styling: * Light Mode (Default): White background with dark text.
+
+Dark Mode: Dark gray/black background with white text.
+
+Clicking the "Toggle Theme" button should instantly swap these styles across the entire screen.
+
+You must have the followings: 
+1. UI Layout & Component Structure: Correctly structure the app using a parent container, a text display for the counter, and a clean arrangement of buttons using Flexbox (e.g., placing the increment/decrement buttons side-by-side). 
+Use proper React Native style properties (flex, justifyContent, alignItems, fontSize, padding).
+
+2. Counter State & Validation Logic: Successfully implement the useState hook to track and dynamically display the counter value. Implement the increase, decrease, and reset functions correctly. 
+Constraint Check: Add an internal conditional check to ensure that clicking decrement at 0 does nothing, keeping the app safe from negative values.
+
+3. Dynamic Theme Toggling: Implement state tracking for the theme (e.g., isDarkMode). Use conditional styling or ternary operators within your style objects to alter the backgroundColor of the main container and the color of the text components based on the theme state.
+
+4. Code Cleanliness & Best Practices: Maintain well-organized code with proper component separation or readable inline styling. Use meaningful variable and function names (e.g., handleIncrement, toggleTheme). 
+
+Ensure no obvious runtime crashes occur during interactions.
+
+Those who are having android mobile must run it in the mobile in development mode. Those having iphone may run in emulator of android studio.

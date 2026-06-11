@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "CounterApp",
+    "slug": "CounterApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F2F2F7"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F2F2F7"
+      }
+    },
+    "platforms": ["ios", "android"]
+  }
+}
